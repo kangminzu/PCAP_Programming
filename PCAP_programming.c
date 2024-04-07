@@ -41,7 +41,7 @@ void printMessage(const unsigned char *packet, const struct pcap_pkthdr *packetH
 }
 
 // Function to handle packet
-void handlePacket(unsigned char *userData, const struct pcap_pkthdr *packetHeader, const unsigned char *packet) {
+void handlePacket(const struct pcap_pkthdr *packetHeader, const unsigned char *packet) {
     printf("--------- Packet Captured ---------\n");
     // Print Ethernet header
     printEthernetHeader(packet);
